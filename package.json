@@ -42,10 +42,5 @@
   "devDependencies": {
     "gh-pages": "^6.1.1",
     "husky": "^9.0.11"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "if git-branch-is master; then predeploy && deploy; fi"
-    }
   }
 }

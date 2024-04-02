@@ -1,0 +1,2 @@
+# bin/sh
+if git-branch-is master; then predeploy && deploy; fi
