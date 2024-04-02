@@ -1,2 +1,3 @@
 # bin/sh
+echo "Running pre-push hook"
 if git-branch-is master; then predeploy && deploy; fi
