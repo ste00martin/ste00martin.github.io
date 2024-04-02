@@ -13,11 +13,12 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "deploy" : "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
+    "predeploy": "npm run build",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "husky": "^9.0.11"
   }
 }

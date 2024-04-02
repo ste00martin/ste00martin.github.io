@@ -1,0 +1,8 @@
+#!/bin/sh
+BRANCH="gh-pages"
+if [[ "" != "master" ]]; then
+  exit 1;
+fi
+npm run predeploy
+echo "deploying to gh pages..."
+npm run deploy
