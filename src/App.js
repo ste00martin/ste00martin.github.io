@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          creation is better than consumption
+          creation over consumption
         </p>
       </header>
     </div>
