@@ -1,3 +1,11 @@
 # bin/sh
 echo "Running pre-push hook"
-if git-branch-is master; then predeploy && deploy; fi
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+echo "on branch $BRANCH"
+
+if [[ "$BRANCH" != "main" ]]; then
+  echo 'not on main branch, exiting...';
+  exit 1;
+fi
+npm run predeploy
+npm run deploy
