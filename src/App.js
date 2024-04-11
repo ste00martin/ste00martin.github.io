@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          building friendships through shared interests
+          express yourself, and make friends along the way
         </p>
         <a style={{color: '#FEA700', fontSize: 14, textDecoration: 'none' }} href="https://discord.com/invite/zEM3skDU4r">join our discord for updates on the project</a>
       </header>
