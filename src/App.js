@@ -12,9 +12,9 @@ function App() {
           let your life shine, make friends along the way
         </p>
         <p>
-          - mobile app coming soon! -
+          - mobile app coming soon -
         </p>
-        <a style={{color: '#FEA700', fontSize: 14, textDecoration: 'none' }} href="https://discord.com/invite/zEM3skDU4r">join the discord for updates</a>
+        <a style={{color: '#FEA700', fontSize: 14, textDecoration: 'none' }} href="https://discord.com/invite/zEM3skDU4r">join for updates!</a>
       </header>
     </div>
   );
