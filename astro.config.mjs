@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
 
 export default defineConfig({
-  site: 'http://www.aglow.life',
+  site: 'https://aglow.life',
   output: 'static'
 })
