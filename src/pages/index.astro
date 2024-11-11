@@ -11,18 +11,20 @@ import BottomLink from '../components/BottomLink.astro';
       </object>
     </div>
 		<h1><span class="text-gradient">Aglow</span></h1>
+		<p class="blurb">connection through shared values, dreams, and desires</p>
+		<p class="coming-soon-message">app coming soon to the App Store and Play Store!</p>
 		<ul role="list" class="link-card-grid">
       <BottomLink
         href="/connect"
-        title="connect with us"
+        title="connect"
       />
       <BottomLink
         href="/terms"
-        title="terms of service"
+        title="terms"
       />
       <BottomLink
         href="/privacy"
-        title="privacy policy"
+        title="privacy"
       />
 		</ul>
 	</main>
@@ -52,32 +54,22 @@ import BottomLink from '../components/BottomLink.astro';
 		height: auto;
 		z-index: -1;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+	.blurb {
+		font-size: 1.2rem;
+		font-weight: normal;
+		text-align: center;
+		margin-top: 2rem;
 	}
-	.instructions code {
-		font-size: 0.8em;
+	.coming-soon-message {
+		font-size: 1.2rem;
 		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
+		margin-top: 2rem;
+		text-align: center;
+		color: rgb(var(--accent-light)); /* Or another color of your choice */
 	}
 	.link-card-grid {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
-		/* display: grid; */
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
