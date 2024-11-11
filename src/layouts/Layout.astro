@@ -18,17 +18,20 @@ const { title } = Astro.props;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+    <title>{title}</title>
+    <!-- Link to Google Fonts for Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	:root {
-    --accent: 184, 108, 44; /* Darker bronze base */
---accent-light: 207, 150, 99; /* Darker lighter bronze */
---accent-dark: 112, 56, 14; /* Darker darker bronze */
+		--accent: 184, 108, 44; /* Darker bronze base */
+		--accent-light: 207, 150, 99; /* Darker lighter bronze */
+		--accent-dark: 112, 56, 14; /* Darker darker bronze */
 		--accent-gradient: linear-gradient(
 			160deg,
 			rgb(var(--accent)),
@@ -37,12 +40,13 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		/* Use Nunito font */
+		font-family: 'Nunito', system-ui, sans-serif;
 		background: #13151a;
 	}
 	code {
 		font-family:
-      Ubuntu,
+			Ubuntu,
 			Menlo,
 			Monaco,
 			Lucida Console,
@@ -52,4 +56,19 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+  h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+  .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
 </style>
+
