@@ -10,8 +10,38 @@ import Card from '../components/Card.astro';
         <img src="/web-app-manifest-512x512.png" />
       </object>
     </div>
-		<h1><span class="text-gradient">terms of service</span></h1>
+		<h1><span class="text-gradient">Terms of Service</span></h1>
 
+    <section>
+      <p>By using our app, you agree to these terms of service. Please read carefully as these terms outline your rights and obligations when using Aglow.</p>
+
+      <h2>1. Account Responsibility</h2>
+      <p>You are responsible for maintaining the confidentiality of your account information and for any activities that occur under your account. Do not share your login information. If you suspect unauthorized use of your account, notify us immediately.</p>
+
+      <h2>2. Content Ownership and Rights</h2>
+      <p>You own any content you create and post within Aglow. By posting, you grant us a worldwide, non-exclusive, royalty-free, perpetual, irrevocable, and sublicensable right to use, display, modify, adapt, and promote your content solely within the app and for promotional purposes. We will not sell your content to third parties. No harmful, illegal, offensive, or infringing content is allowed. We reserve the right to remove content that violates these terms or applicable laws.</p>
+
+      <h2>3. Community Conduct</h2>
+      <p>Be respectful to others. Any form of harassment, bullying, hate speech, spamming, or abusive behavior is prohibited and will result in account suspension or termination. Violations will be handled on a case-by-case basis, and users will have the right to appeal disciplinary actions.</p>
+
+      <h2>4. Privacy and Data Use</h2>
+      <p>We respect your privacy and are committed to protecting your personal information. Please review our Privacy Policy to understand how we collect, use, and safeguard your data. By using Aglow, you consent to the practices described in the privacy policy.</p>
+
+      <h2>5. Limitation of Liability</h2>
+      <p>While we strive to keep Aglow running smoothly, we are not responsible for any data loss, bugs, or service disruptions that may occur while using the app. We disclaim liability for indirect, incidental, or consequential damages arising from your use of the app, except in cases of gross negligence or intentional misconduct. This limitation of liability may not apply in certain jurisdictions where such disclaimers are restricted by law.</p>
+
+      <h2>6. Changes to Terms and Services</h2>
+      <p>We may update or change the app, and these terms may also change. We will notify you of significant updates by email or in-app notification. Continued use of Aglow after changes are made constitutes your acceptance of the updated terms.</p>
+
+      <h2>7. Account Suspension or Termination</h2>
+      <p>We reserve the right to suspend or terminate any account that violates these terms. Grounds for termination include, but are not limited to, abusive behavior, illegal content, or repeated violations of our community guidelines. If your account is terminated, you may contact us to dispute or appeal the decision.</p>
+
+      <h2>8. Governing Law and Dispute Resolution</h2>
+      <p>These terms are governed by the laws of California, and any disputes will be resolved through mediation or arbitration before escalating to legal action. By using Aglow, you agree to submit to the jurisdiction of the courts in California.</p>
+
+      <h2>9. Acceptance of Terms</h2>
+      <p>By using Aglow, you agree to follow these terms and help foster a positive community experience. Thank you for being a part of Aglow!</p>
+    </section>
   </main>
 </Layout>
 
@@ -53,28 +83,12 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+	section {
+		margin-top: 2rem;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
+	h2 {
+		font-size: 1.8rem;
+		margin-top: 1.5rem;
 		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
 	}
 </style>
