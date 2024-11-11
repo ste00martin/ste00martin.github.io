@@ -3,15 +3,20 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="connect">
+<Layout title="Connect">
 	<main>
     <div class="background-icon-container">
       <object data="/icon.svg" type="image/svg+xml" width="200">
         <img src="/web-app-manifest-512x512.png" />
       </object>
     </div>
-		<h1><span class="text-gradient">chat with us</span></h1>
+		<h1><span class="text-gradient">Say Hey</span></h1>
+    <section>
+      <p>Have questions, need help, or want to share a suggestion for Aglow? We’re here to listen and assist! Whether it's a feature request, feedback on our app, or a bug you encountered, we welcome your input.</p>
+      <p>Reach out anytime to: <a href="mailto:hello@aglow.life">hello@aglow.life</a></p>
 
+      <p>Our team will review your message and respond as soon as possible. We’re committed to creating the best experience for our users and appreciate your support and feedback!</p>
+    </section>
   </main>
 </Layout>
 
@@ -53,28 +58,18 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+	section {
+		margin-top: 2rem;
+		text-align: center;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
+	section p {
+		margin-bottom: 1rem;
+	}
+	a {
 		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+		text-decoration: none;
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+	a:hover {
+		text-decoration: underline;
 	}
 </style>
