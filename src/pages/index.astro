@@ -18,7 +18,7 @@ import BottomLink from '../components/BottomLink.astro';
            alt="Download on the App Store"
            style="width: 200px;">
     </a>
-    		<p class="coming-soon-message">coming soon to the Play Store!</p>
+    		<p class="coming-soon-message">coming soon to google play store!</p>
 		<ul role="list" class="link-card-grid">
       <BottomLink
         href="/connect"
@@ -44,7 +44,7 @@ import BottomLink from '../components/BottomLink.astro';
 
       // Get the query string parameter from the URL
       const params = new URLSearchParams(window.location.search);
-      const redirectToAppStore = params.has("openAppStore");
+      const redirectToAppStore = params.has("openstore");
 
       if (isIOS && redirectToAppStore) {
         // Redirect to your App Store link
