@@ -20,8 +20,10 @@ const { title } = Astro.props;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <!-- Link to Google Fonts for Nunito -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!-- Remove the Google Fonts Nunito link and add our custom font CSS -->
+    <link rel="stylesheet" href="/src/styles/fonts.css" />
+    <!-- Add Poiret One font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<slot />
@@ -41,13 +43,14 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		/* Use Nunito font */
-		font-family: 'Nunito', system-ui, sans-serif;
+		font-family: 'Metropolis', system-ui, sans-serif;
 		background: #000000;
+	}
+	body {
+		font-family: 'Metropolis', system-ui, sans-serif;
 	}
 	code {
 		font-family:
-			Ubuntu,
 			Menlo,
 			Monaco,
 			Lucida Console,
@@ -57,24 +60,24 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
-  h1 {
+	h1, h2, h3 {
+		font-family: 'Poiret One', 'Metropolis', cursive;
+	}
+	h1 {
 		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
 	}
-  h1, h2, h3 {
-		font-family: 'Montserrat', sans-serif;
-	}
-  .text-gradient {
+	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
 	}
-  a {
+	a {
 		color: rgb(var(--accent-light));
 		text-decoration: none;
 	}

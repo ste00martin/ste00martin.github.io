@@ -15,7 +15,7 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/aglow-life/id6463022133";
     </div>
 		<h1><span class="text-gradient">Aglow</span></h1>
     <div class="main-container">
-		<p class="blurb">building genuine connection through shared values</p>
+		<p class="blurb">connection through letting your light of interest and values shine</p>
     <div class="store-buttons">
       <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
         <img src="/download-on-the-app-store-apple-logo-svgrepo-com.svg"
@@ -45,28 +45,8 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/aglow-life/id6463022133";
   </div>
 	</main>
   <script define:vars={{ PLAY_STORE_URL, APP_STORE_URL }}>
-    // Execute redirect logic immediately
-    const userAgent = navigator.userAgent || navigator.vendor;
-
-    // Check if the device is running iOS
-    const isIOS = /iPad|iPhone|iPod/.test(userAgent) && typeof (window as any).MSStream === "undefined";
-
-    // Check if the device is running Android
-    const isAndroid = /android/i.test(userAgent);
-
-    // Get the query string parameter from the URL
-    const params = new URLSearchParams(window.location.search);
-    const redirectToAppStore = params.has("openstore");
-
-    if(redirectToAppStore) {
-      if (isIOS) {
-        // Redirect to your App Store link
-        window.location.href = APP_STORE_URL;
-      } else if (isAndroid) {
-        // Redirect to your Google Play Store link
-        window.location.href = PLAY_STORE_URL;
-      }
-    }
+    import { handleStoreRedirect } from '../scripts/storeRedirect';
+    handleStoreRedirect(APP_STORE_URL, PLAY_STORE_URL);
   </script>
 </Layout>
 
