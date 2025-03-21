@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BottomLink from '../components/BottomLink.astro';
+
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.aglow.abbey&pli=1";
+const APP_STORE_URL = "https://apps.apple.com/us/app/aglow-life/id6463022133";
 ---
 
 <Layout title="Aglow Life">
@@ -14,12 +17,12 @@ import BottomLink from '../components/BottomLink.astro';
     <div class="main-container">
 		<p class="blurb">building genuine connection through shared values</p>
     <div class="store-buttons">
-      <a href="https://apps.apple.com/us/app/aglow-life/id6463022133" target="_blank" rel="noopener noreferrer">
+      <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
         <img src="/download-on-the-app-store-apple-logo-svgrepo-com.svg"
              alt="Download on the App Store"
              style="width: 200px;">
       </a>
-      <a href="https://play.google.com/store/apps/details?id=com.aglow.abbey&pli=1" class="play-store-button" >
+      <a href={PLAY_STORE_URL} class="play-store-button" >
         <img src="/google-play-badge-logo-svgrepo-com.svg"
              alt="Get it on Google Play"
              style="width: 200px;">
@@ -41,23 +44,30 @@ import BottomLink from '../components/BottomLink.astro';
 		</ul>
   </div>
 	</main>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const userAgent = navigator.userAgent || navigator.vendor;
+  <script define:vars={{ PLAY_STORE_URL, APP_STORE_URL }}>
+    // Execute redirect logic immediately
+    const userAgent = navigator.userAgent || navigator.vendor;
 
-      // Check if the device is running iOS
-      const isIOS = /iPad|iPhone|iPod/.test(userAgent) && typeof (window as any).MSStream === "undefined";
+    // Check if the device is running iOS
+    const isIOS = /iPad|iPhone|iPod/.test(userAgent) && typeof (window as any).MSStream === "undefined";
 
-      // Get the query string parameter from the URL
-      const params = new URLSearchParams(window.location.search);
-      const redirectToAppStore = params.has("openstore");
+    // Check if the device is running Android
+    const isAndroid = /android/i.test(userAgent);
 
-      if (isIOS && redirectToAppStore) {
+    // Get the query string parameter from the URL
+    const params = new URLSearchParams(window.location.search);
+    const redirectToAppStore = params.has("openstore");
+
+    if(redirectToAppStore) {
+      if (isIOS) {
         // Redirect to your App Store link
-        window.location.href = "https://apps.apple.com/us/app/aglow-life/id6463022133";
+        window.location.href = APP_STORE_URL;
+      } else if (isAndroid) {
+        // Redirect to your Google Play Store link
+        window.location.href = PLAY_STORE_URL;
       }
-    });
-	</script>
+    }
+  </script>
 </Layout>
 
 <style>
