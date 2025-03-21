@@ -13,12 +13,18 @@ import BottomLink from '../components/BottomLink.astro';
 		<h1><span class="text-gradient">Aglow</span></h1>
     <div class="main-container">
 		<p class="blurb">building genuine connection through shared values</p>
-    <a href="https://apps.apple.com/us/app/aglow-life/id6463022133" target="_blank" rel="noopener noreferrer">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-           alt="Download on the App Store"
-           style="width: 200px;">
-    </a>
-    		<p class="coming-soon-message">coming soon to the google play store!</p>
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/us/app/aglow-life/id6463022133" target="_blank" rel="noopener noreferrer">
+        <img src="./public/download-on-the-app-store-apple-logo-svgrepo-com.svg"
+             alt="Download on the App Store"
+             style="width: 200px;">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.aglow.abbey&pli=1" class="play-store-button" >
+        <img src="./public/google-play-badge-logo-svgrepo-com.svg"
+             alt="Get it on Google Play"
+             style="width: 200px;">
+      </a>
+    </div>
 		<ul role="list" class="link-card-grid">
       <BottomLink
         href="/connect"
@@ -101,5 +107,13 @@ import BottomLink from '../components/BottomLink.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.store-buttons {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 </style>
